@@ -1,0 +1,1 @@
+Compress-Archive -Path "deploy_pythonanywhere_*" -DestinationPath "pythonanywhere_deploy.zip"

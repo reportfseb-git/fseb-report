@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .item { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dashboard</h2>
+        <p>Welcome! This is the protected dashboard.</p>
+        <button onclick="loadItems()">Load Items</button>
+        <button onclick="logout()">Logout</button>
+        <div id="items"></div>
+        <p><a href="/">Back to Home</a></p>
+    </div>
+    <script>
+        async function loadItems() {
+            const response = await fetch('/api/items');
+            const items = await response.json();
+            document.getElementById('items').innerHTML = 
+                items.map(item => \<div class="item">\</div>\).join('');
+        }
+        
+        async function logout() {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

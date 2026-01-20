@@ -1,0 +1,32 @@
+﻿# # Core
+# Flask==3.0.0
+# Flask-CORS==4.0.0
+# Flask-Migrate==4.0.5
+# Flask-SQLAlchemy==3.1.1
+# Flask-Login==0.6.3
+
+# # Database - USE THIS FOR PYTHON 3.14
+# sqlalchemy==2.0.45
+# pymssql==2.3.11  # This works with Python 3.14!
+
+# # Environment
+# python-dotenv==1.0.0
+
+# # Utilities
+# openpyxl==3.1.2
+# python-dateutil==2.8.2
+
+# # Testing
+# pytest==7.4.3
+
+# # Deployment
+# gunicorn==21.2.0
+
+
+#-------------
+Flask==2.3.3
+pymssql==2.3.11
+Flask-SQLAlchemy==3.0.5
+Flask-CORS==4.0.0
+python-dotenv==1.0.0
+SQLAlchemy==2.0.19
